@@ -1,2 +1,2 @@
 # ice-cream-please
-Synchronous app to see Redux in action
+Synchronous app to see basic Redux in action
