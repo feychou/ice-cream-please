@@ -8,12 +8,15 @@
   border: 1px solid black;
 }
 
-.one {
-  grid-colum: 1 / 2;
+.IceCream {
+  grid-column: 1 / 2;
   grid-row: 1 / 5;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
-.two {
+.Colours {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
   display: grid;
@@ -21,7 +24,7 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
-.three {
+.Moods {
   grid-column: 2 / 3;
   grid-row: 3 / 5;
   display: grid;
