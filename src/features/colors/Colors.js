@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  pickColor,
-  selectColors
-} from './colorsSlice';
+import { pickColor, selectColors } from './colorsSlice';
 
 import styles from './Colors.module.css';
 
@@ -11,7 +8,6 @@ export default function Colors() {
 
   const colors = useSelector(selectColors);
   const dispatch = useDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
 
   return (
     <div className={styles.Colors}>

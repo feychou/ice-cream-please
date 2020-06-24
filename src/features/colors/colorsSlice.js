@@ -27,6 +27,14 @@ export const colorsSlice = createSlice({
       id: '#DFABF2',
       isSelected: false
     },
+    {
+      id: '#C8C6EF',
+      isSelected: false
+    },
+    {
+      id: '#B2E2F7',
+      isSelected: false
+    }
   ]},
   reducers: {
     pickColor: (state, { payload }) => {
@@ -48,13 +56,7 @@ export const colorsSlice = createSlice({
           isSelected: false
         }
       })
-    },
-    decrement: state => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
+    }
   },
 });
 
@@ -64,5 +66,6 @@ export const { pickColor } = colorsSlice.actions;
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.counter.value)`
 export const selectColors = state => state.colors.data;
+export const selectActiveColor = state => state.colors.data.filter(({ isSelected }) => isSelected)[0];
 
 export default colorsSlice.reducer;
