@@ -6,8 +6,8 @@ import './App.css';
 
 function App() {
   return (
-    <div class="App">
-      <div class="IceCream">
+    <div className="App">
+      <div className="IceCream">
         <IceCream  size={400} />
       </div>
       <Colors />

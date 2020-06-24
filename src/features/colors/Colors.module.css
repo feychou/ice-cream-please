@@ -17,4 +17,13 @@
   height: 70px;
   cursor: pointer;
   width: 70px;
+  position: relative;
+}
+
+.ColorSquareSelected:after {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: '\f00c';
+  position: absolute;
+  right: 85%;
+  top: 70%;
 }

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
+  changeColor,
   selectColors,
+  increment
 } from './colorsSlice';
 
 import styles from './Colors.module.css';
 
 export default function Colors() {
+
   const colors = useSelector(selectColors);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
@@ -19,7 +18,11 @@ export default function Colors() {
     <div className={styles.Colors}>
       {colors.map(color => (
         <span className={styles.ColorSquareWrapper}>
-          <span className={styles.ColorSquare} style={{ backgroundColor: color.id }} />
+          <span
+            className={`${styles.ColorSquare} ${color.isSelected ? styles.ColorSquareSelected : ''}`}
+            style={{ backgroundColor: color.id }}
+            onClick={() => dispatch(increment())}
+          />
         </span>
       ))}
     </div>
