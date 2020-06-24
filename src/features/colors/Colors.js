@@ -5,16 +5,26 @@ import {
   increment,
   incrementByAmount,
   incrementAsync,
-  selectCount,
-} from './counterSlice';
-import styles from './Counter.module.css';
+  selectColors,
+} from './colorsSlice';
 
-export function Counter() {
-  const count = useSelector(selectCount);
+import styles from './Colors.module.css';
+
+export default function Colors() {
+  const colors = useSelector(selectColors);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
 
   return (
+    <div className={styles.Colors}>
+      {colors.map(color => (
+        <span className={styles.ColorSquareWrapper}>
+          <span className={styles.ColorSquare} style={{ backgroundColor: color.id }} />
+        </span>
+      ))}
+    </div>
+  )
+  /*return (
     <div>
       <div className={styles.row}>
         <button
@@ -56,5 +66,5 @@ export function Counter() {
         </button>
       </div>
     </div>
-  );
+  );*/
 }
