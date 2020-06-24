@@ -29,20 +29,25 @@ export const colorsSlice = createSlice({
     },
   ]},
   reducers: {
-    increment: state => {
+    pickColor: (state, { payload }) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.data = [    {
-      id: '#F6B672',
-      isSelected: false
-    },
-    {
-      id: '#DFABF2',
-      isSelected: false
-    },];
 
+      state.data = state.data.map(color => {
+        if (color.id === payload) {
+          return {
+            ...color,
+            isSelected: true
+          }
+        }
+
+        return {
+          ...color,
+          isSelected: false
+        }
+      })
     },
     decrement: state => {
       state.value -= 1;
@@ -53,7 +58,7 @@ export const colorsSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount } = colorsSlice.actions;
+export const { pickColor } = colorsSlice.actions;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of

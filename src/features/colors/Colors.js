@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  changeColor,
-  selectColors,
-  increment
+  pickColor,
+  selectColors
 } from './colorsSlice';
 
 import styles from './Colors.module.css';
@@ -21,7 +20,7 @@ export default function Colors() {
           <span
             className={`${styles.ColorSquare} ${color.isSelected ? styles.ColorSquareSelected : ''}`}
             style={{ backgroundColor: color.id }}
-            onClick={() => dispatch(increment())}
+            onClick={() => dispatch(pickColor(color.id))}
           />
         </span>
       ))}
