@@ -14,7 +14,8 @@ In this step you'll make it possible for your ice cream to have a wider range of
 
 ### Steps
 
-1. In the folder `features`, create a `moodsSlice.js` file modelled upon the color slice.
+1. In the folder `features`, create the `moodsSlice.js` file modelled upon the existing color slice.
 2. Move the moods data from the component to the slice to create the initial state.
 3. Create actions to handle the `isSelected` flag correctly.
-4. Connect your selectors to both components that need them so that the ice cream expression will reflect your mood selection. Remember to add a tick next to the selected menu item.
+4. Connect your selectors to both components that need them so that the ice cream expression will reflect your mood selection.
+Remember to add a tick next to the selected menu item.
