@@ -8,11 +8,12 @@ npm start
 ```
 
 
-## Challenge 1
+## Challenge
 
 In this step you'll make it possible for your ice cream to have a wider range of expressions! The emojis to pick the moods are already displayed below the color menu, but the selection does not work yet.
 
 ### Steps
+
 1. In the folder `features`, create a `moodsSlice.js` file modelled upon the color slice.
 2. Move the moods data from the component to the slice to create the initial state.
 3. Create actions to handle the `isSelected` flag correctly.
