@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import colorReducer from '../features/colors/colorsSlice';
+import colorReducer from '../features/colorsSlice';
 
 export default configureStore({
   reducer: {

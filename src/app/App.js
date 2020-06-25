@@ -2,8 +2,8 @@ import React from 'react';
 import { IceCream } from 'react-kawaii';
 import { useSelector } from 'react-redux';
 
-import Colors from './features/colors/Colors'
-import { selectActiveColor } from './features/colors/colorsSlice';
+import Colors from '../components/colors/Colors'
+import { selectActiveColor } from '../features/colorsSlice';
 import './App.css';
 
 function App() {

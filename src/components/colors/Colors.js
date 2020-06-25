@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { pickColor, selectColors } from './colorsSlice';
+import { pickColor, selectColors } from '../../features/colorsSlice';
 
 import styles from './Colors.module.css';
 
