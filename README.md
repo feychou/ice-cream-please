@@ -9,13 +9,14 @@ npm start
 
 ## Challenge 1
 
-In this step you'll do a bit of refactoring. As you can see, the `App.js` file also holds the `IceCream` component. However, for better organisation, we want to move the `IceCream` component in its own subdirectory inside the `component` directory.
+In this step you'll do a bit of refactoring. As you can see, the `App.js` file also holds the `IceCream` component. However, for better code organisation, we want to move the `IceCream` component in its own subdirectory inside the `component` directory.
 
 ### Steps
 
-1. Inside the `components` subdirectory, create a directory for the `IceCream` component similar to the ones for the other components.
+1. Inside the `components` directory, create a subdirectory for the `IceCream` component similar to the ones for the other components.
 2. Dont forget to create its own styles file along with the component file!
-3. Move all the selectors which are needed in the `IceCream` component from the `App` component to the `IceCream` component.
+Move all the style related to the `IceCream` component from the `App` component to the newly created folder.
+3. Move all the redux selectors which are needed in the `IceCream` component from the `App` component to the `IceCream` component.
 
 ## Challenge 2
 
