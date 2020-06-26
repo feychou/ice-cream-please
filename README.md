@@ -1,6 +1,6 @@
 # Install and Run
 
-Synchronous app to see basic Redux in action
+:ice_cream: Synchronous app to see basic Redux in action
 
 ```
 npm i
