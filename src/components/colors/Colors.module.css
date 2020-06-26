@@ -9,6 +9,7 @@
 
 .ColorSquareWrapper {
   display: grid;
+  padding: 5px;
   justify-items: center;
   align-items: center;
 }
@@ -22,7 +23,7 @@
 
 .ColorSquareSelected:after {
   font: normal normal normal 14px/1 FontAwesome;
-  content: '\f00c';
+  content: "\f00c";
   position: absolute;
   right: 85%;
   top: 70%;

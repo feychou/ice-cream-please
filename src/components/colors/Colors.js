@@ -1,11 +1,10 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { pickColor, selectColors } from '../../features/colorsSlice';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { pickColor, selectColors } from "../../features/colorsSlice";
 
-import styles from './Colors.module.css';
+import styles from "./Colors.module.css";
 
 export default function Colors() {
-
   const colors = useSelector(selectColors);
   const dispatch = useDispatch();
 
@@ -14,12 +13,15 @@ export default function Colors() {
       {colors.map(color => (
         <span className={styles.ColorSquareWrapper}>
           <span
-            className={`${styles.ColorSquare} ${color.isSelected ? styles.ColorSquareSelected : ''}`}
+            key={color.id}
+            className={`${styles.ColorSquare} ${
+              color.isSelected ? styles.ColorSquareSelected : ""
+            }`}
             style={{ backgroundColor: color.id }}
             onClick={() => dispatch(pickColor(color.id))}
           />
         </span>
       ))}
     </div>
-  )
+  );
 }
